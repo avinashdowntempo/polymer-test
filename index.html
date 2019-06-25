@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>application-host</title>
+  <script type="module" src="./dist/main.js"></script>
+</head>
+
+<body>
+
+  <map-element id="test" height=700 width=1000></map-element>
+  <script>
+    var test = document.getElementById("test");
+    test.addEventListener("map-loaded", e => {
+      test.coord = {
+        lat: 13.0827,
+        long: 80.2707
+      }
+      test.markers = [{
+          "Store": "S1000",
+          "Status": "outage",
+          "NetworkProvider": "AIRTEL",
+          "Adress": "India",
+          "lat": 13.0827,
+          "long": 80.2707
+        },
+        {
+          "Store": "S2000",
+          "Status": "impaired",
+          "NetworkProvider": "COMCAST",
+          "Adress": "LasVegas",
+          "lat": 36.114647,
+          "long": -115.172813
+        },
+        {
+          "Store": "S3000",
+          "Status": "outage",
+          "NetworkProvider": "VODAFONE",
+          "Adress": "Sydney",
+          "lat": -33.856159,
+          "long": 151.215256
+        },
+        {
+          "Store": "S4000",
+          "Status": "impaired",
+          "NetworkProvider": "JIO",
+          "Adress": "Tokyo",
+          "lat": 35.553333,
+          "long": 139.781113
+        },
+        {
+          "Store": "S5000",
+          "Status": "outage",
+          "NetworkProvider": "AT&T",
+          "Adress": "Paris",
+          "lat": 48.864716,
+          "long": 2.349014
+        }
+      ];
+      test.renderMap();
+    });
+  </script>
+</body>
+
+</html>
